@@ -20,7 +20,8 @@
 // ---------------- SEARCH DROPDOWN FUNCTIONALITY ----------------
 
 // Example countries (you can expand this list)
-const countries = [
+if (!window.countries) {
+window.countries = [
   "India",
   "United States",
   "France",
@@ -32,6 +33,7 @@ const countries = [
   "Japan",
   "Australia"
 ];
+}
 
 const searchBox = document.getElementById("searchBox");
 const suggestions = document.getElementById("suggestions");
