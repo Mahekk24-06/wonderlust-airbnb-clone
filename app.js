@@ -114,15 +114,15 @@ app.use((req, res, next) => {
   next();
 });
 
+// ===============================
+// Routes
+// ===============================
+
 //HOME ROUTE
 
 app.get("/", (req, res) => {
   res.redirect("/listings");
 });
-
-// ===============================
-// Routes
-// ===============================
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
